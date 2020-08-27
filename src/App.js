@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
+import "./App.css";
 
-function App() {
+import Landing from "./sections/Landing";
+import Header from "./components/Header";
+
+const App = () => {
   return (
-    <div>
-      AWFire Protection Inc.
-    </div>
+    <>
+      <Header />
+      <Landing />
+    </>
   );
 }
 
