@@ -28,30 +28,34 @@ const HeaderTitle = styled.h1`
 	margin-right: 10px;
 `;
 
+const ContactContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 340px;
+`;
+
 const ContactInfo = styled.p`
 	color: #fff;
 	display: inline-block;
-	align-self: flex-end;
+	margin: auto;
 `;
 
-const Phone = styled(ContactInfo)`
-	margin-right: 10px;
-`;
-
+const Phone = styled(ContactInfo)``;
 const Email = styled(ContactInfo)``;
 
 const Header = () => (
 	<HeaderContainer>
-		<div>
+		<div style={{textAlign: 'center'}}>
 			<AwfireLogo src={AwfireLogoSrc}/>
 			<HeaderTitle>
 				AWFire Protection
 			</HeaderTitle>
-		</div>
-		<div>
+		</div>	
+		<ContactContainer>
 			<Phone>Phone: 416-893-6660</Phone>
 			<Email>Email: info@AWFire.ca</Email>
-		</div>
+		</ContactContainer>
 	</HeaderContainer>
 );
 
