@@ -7,12 +7,12 @@ const HeaderContainer = styled.div`
 	padding: 10px 8%;
 	margin: 0 auto;
   color: #222;
-  background-color: #ff5349;
 	z-index: 99;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-end;
+	border-bottom: solid 2px #aaa;
 `;
 
 const AwfireLogo = styled.img`
@@ -23,7 +23,7 @@ const AwfireLogo = styled.img`
 
 const HeaderTitle = styled.h1`
 	display: inline-block;
-	color: #fff;
+	color: #e55;
 	// temp
 	margin-right: 10px;
 `;
@@ -36,7 +36,7 @@ const ContactContainer = styled.div`
 `;
 
 const ContactInfo = styled.p`
-	color: #fff;
+	color: #333;
 	display: inline-block;
 	margin: auto;
 `;
