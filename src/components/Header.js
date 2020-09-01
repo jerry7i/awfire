@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
 import AwfireLogoSrc from "../images/awfire_logo.png";
+import phoneIcon from "../images/phone_icon.png";
+import emailIcon from "../images/email_icon.png";
 
 const HeaderContainer = styled.div`
 	width: 100%;
@@ -20,6 +22,16 @@ const AwfireLogo = styled.img`
 	height: 80px;
 	padding: 0;
 `;
+
+const StyledIcon = styled.img`
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+	vertical-align: middle;
+`;
+
+const PhoneIcon = styled(StyledIcon)``;
+const EmailIcon = styled(StyledIcon)``;
 
 const HeaderTitle = styled.h1`
 	display: inline-block;
@@ -53,8 +65,14 @@ const Header = () => (
 			</HeaderTitle>
 		</div>	
 		<ContactContainer>
-			<Phone>Phone: 416-893-6660</Phone>
-			<Email>Email: info@AWFire.ca</Email>
+			<Phone>
+				<PhoneIcon src={phoneIcon} />
+				416-893-6660
+			</Phone>
+			<Email>
+				<EmailIcon src={emailIcon}/> 
+				info@AWFire.ca
+			</Email>
 		</ContactContainer>
 	</HeaderContainer>
 );
