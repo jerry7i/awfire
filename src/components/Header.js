@@ -23,21 +23,9 @@ const AwfireLogo = styled.img`
 	padding: 0;
 `;
 
-const StyledIcon = styled.img`
-	width: 25px;
-	height: 25px;
-	margin-right: 5px;
-	vertical-align: middle;
-`;
-
-const PhoneIcon = styled(StyledIcon)``;
-const EmailIcon = styled(StyledIcon)``;
-
 const HeaderTitle = styled.h1`
 	display: inline-block;
 	color: #e55;
-	// temp
-	margin-right: 10px;
 `;
 
 const ContactContainer = styled.div`
@@ -47,10 +35,21 @@ const ContactContainer = styled.div`
 	width: 340px;
 `;
 
+const ContactIcon = styled.img`
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: bottom;
+`;
+
+const PhoneIcon = styled(ContactIcon)``;
+const EmailIcon = styled(ContactIcon)``;
+
 const ContactInfo = styled.p`
 	color: #333;
 	display: inline-block;
-	margin: auto;
+	margin: 0 auto;
 `;
 
 const Phone = styled(ContactInfo)``;
