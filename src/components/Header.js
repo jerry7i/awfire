@@ -1,20 +1,22 @@
 import React from 'react'
 import styled from "styled-components";
+
+import PaddingWrapper from "./PaddingWrapper";
 import AwfireLogoSrc from "../images/awfire_logo.png";
 import phoneIcon from "../images/phone_icon.png";
 import emailIcon from "../images/email_icon.png";
 
 const HeaderContainer = styled.div`
-	width: 100%;
-	padding: 10px 8%;
-	margin: 0 auto;
-  color: #222;
 	z-index: 99;
+	border-bottom: solid 2px #aaa;
+	background-color: #fff;
+`;
+
+const HeaderContent = styled.div`
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-end;
-	border-bottom: solid 2px #aaa;
 `;
 
 const AwfireLogo = styled.img`
@@ -57,22 +59,26 @@ const Email = styled(ContactInfo)``;
 
 const Header = () => (
 	<HeaderContainer>
-		<div style={{textAlign: 'center'}}>
-			<AwfireLogo src={AwfireLogoSrc}/>
-			<HeaderTitle>
-				AWFire Protection
-			</HeaderTitle>
-		</div>	
-		<ContactContainer>
-			<Phone>
-				<PhoneIcon src={phoneIcon} />
-				416-893-6660
-			</Phone>
-			<Email>
-				<EmailIcon src={emailIcon}/> 
-				info@AWFire.ca
-			</Email>
-		</ContactContainer>
+		<PaddingWrapper paddingTopBot="10px">
+			<HeaderContent>
+				<div style={{textAlign: 'center'}}>
+					<AwfireLogo src={AwfireLogoSrc}/>
+					<HeaderTitle>
+						AWFire Protection
+					</HeaderTitle>
+				</div>	
+				<ContactContainer>
+					<Phone>
+						<PhoneIcon src={phoneIcon} />
+						416-893-6660
+					</Phone>
+					<Email>
+						<EmailIcon src={emailIcon}/> 
+						info@AWFire.ca
+					</Email>
+				</ContactContainer>
+			</HeaderContent>
+		</PaddingWrapper>
 	</HeaderContainer>
 );
 

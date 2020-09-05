@@ -22,7 +22,7 @@ const Showcase = styled.section`
 	}
 
 	@media ${device.mobileL} {
-		height: 400px;
+		height: 450px;
 		padding-top: 150px;
 	}
 

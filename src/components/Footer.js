@@ -1,34 +1,25 @@
 import React from 'react'
 import styled from "styled-components";
 import { device } from "../device";
+
+import PaddingWrapper from "./PaddingWrapper";
 import phoneIcon from "../images/phone_icon.png";
 import emailIcon from "../images/email_icon.png";
 import houseIcon from "../images/house_icon.png";
 
 const FooterContainer = styled.div`
+  background-color: #222;
+`;
+
+const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
 	flex-wrap: wrap;
-	width: 100%;
-	padding: 20px 8%;
-	margin: 0 auto;
-  background-color: #222;
-
-  @media ${device.mobileS} {
-    padding: 20px 5%;
-  }
-  
-  @media ${device.tablet} {
-    padding: 20px 8%;
-  }
-
-  @media ${device.desktop} {
-    padding: 20px 15%
-  }
 `;
 
 const FooterText = styled.p`
   color: #aaa;
+  display: block;
 `;
 
 const Copyright = styled(FooterText)`
@@ -37,7 +28,7 @@ const Copyright = styled(FooterText)`
   }
   
   @media ${device.tablet} {
-    margin: 0 100px 10px 0;
+    margin: 0px 100px 20px 0;
   }
 `;
 
@@ -53,24 +44,28 @@ const ContactIcon = styled.img`
 `;
 
 const Footer = () => (
-  <FooterContainer >
-    <Copyright>
-      Copyrights © 2020 All Rights Reserved by AWFire Protection
-    </Copyright>
-    <ContactInfo>
-      <div>
-        <ContactIcon src={phoneIcon} />
-        416-893-6660
-      </div>
-      <div>
-        <ContactIcon src={emailIcon} />
-        info@AWFire.ca
-      </div>
-      <div>
-        <ContactIcon src={houseIcon} />
-        2 Goldbrook Crescent, Richmond Hill, ON L4S 1V4
-      </div>
-    </ContactInfo>
+  <FooterContainer>
+    <PaddingWrapper paddingTopBot="20px">
+      <FooterContent>
+        <Copyright>
+          Copyrights © 2020 All Rights Reserved by AWFire Protection
+        </Copyright>
+        <ContactInfo>
+          <FooterText>
+            <ContactIcon src={phoneIcon} />
+            416-893-6660
+          </FooterText>
+          <FooterText>
+            <ContactIcon src={emailIcon} />
+            info@AWFire.ca
+          </FooterText>
+          <FooterText>
+            <ContactIcon src={houseIcon} />
+            2 Goldbrook Crescent, Richmond Hill, ON L4S 1V4
+          </FooterText>
+        </ContactInfo>
+      </FooterContent>
+    </PaddingWrapper>
   </FooterContainer>
 );
 
