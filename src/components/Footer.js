@@ -35,6 +35,8 @@ const Copyright = styled(FooterText)`
   margin-bottom: 20px;
 `;
 
+const date = new Date();
+
 const ContactInfo = styled(FooterText)``;
 
 const ContactIcon = styled.img`
@@ -51,7 +53,7 @@ const Footer = () => (
     <PaddingWrapper paddingTopBot="20px">
       <FooterContent>
         <Copyright>
-          Copyrights © 2020 All Rights Reserved by AWFire Protection
+          Copyrights &copy; {date.getFullYear()} All Rights Reserved by AWFire Protection
         </Copyright>
         <ContactInfo>
           <FooterText>
