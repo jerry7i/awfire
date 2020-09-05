@@ -37,8 +37,6 @@ const Copyright = styled(FooterText)`
 
 const date = new Date();
 
-const ContactInfo = styled(FooterText)``;
-
 const ContactIcon = styled.img`
 	width: 25px;
 	height: 25px;
@@ -54,7 +52,7 @@ const Footer = () => (
       <Copyright>
         Copyright &copy; {date.getFullYear()} AWFire Protection. All Rights Reserved
       </Copyright>
-      <ContactInfo>
+      <div>
         <FooterText>
           <ContactIcon src={phoneIcon} />
           416-893-6660
@@ -67,7 +65,7 @@ const Footer = () => (
           <ContactIcon src={houseIcon} />
           2 Goldbrook Crescent, Richmond Hill, ON L4S 1V4
         </FooterText>
-      </ContactInfo>
+      </div>
     </FooterContentWrapper>
   </FooterContainer>
 );
