@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
+
+import PaddingWrapper from "../components/PaddingWrapper";
 import showcaseBg from "../images/fire_sprinkler_bg.jpg";
 
 const LandingContainer = styled.div`
@@ -24,6 +26,9 @@ const Showcase = styled.section`
 	@media ${device.mobileL} {
 		height: 450px;
 		padding-top: 150px;
+		h1 {
+			font-size: 30px;
+		}
 	}
 
 	@media ${device.tablet} {
@@ -55,15 +60,16 @@ const ShowcaseText = styled.h1`
 	font-size: 40px;
 	color: #fff;
 	text-shadow: 2.5px 2.5px 0 #ff6347;
-	margin: 0px 30px;
 `;
 
 const Landing = () => (
 	<LandingContainer>
 		<Showcase>
-			<ShowcaseText>
-				Design, Inspect, Test, Troubleshoot & Maintain:
-			</ShowcaseText>
+			<PaddingWrapper>
+				<ShowcaseText>
+					Design, Inspect, Test, Troubleshoot & Maintain:
+				</ShowcaseText>
+			</PaddingWrapper>
 		</Showcase>
 	</LandingContainer>
 );
