@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { device } from "../device";
 
-import PaddingWrapper from "./PaddingWrapper";
+import ContentWrapper from "./ContentWrapper";
 import phoneIcon from "../images/phone_icon.png";
 import emailIcon from "../images/email_icon.png";
 import houseIcon from "../images/house_icon.png";
@@ -50,7 +50,7 @@ const ContactIcon = styled.img`
 
 const Footer = () => (
   <FooterContainer>
-    <PaddingWrapper paddingTopBot="20px">
+    <ContentWrapper paddingTopBot="20px">
       <FooterContent>
         <Copyright>
           Copyrights &copy; {date.getFullYear()} All Rights Reserved by AWFire Protection
@@ -70,7 +70,7 @@ const Footer = () => (
           </FooterText>
         </ContactInfo>
       </FooterContent>
-    </PaddingWrapper>
+    </ContentWrapper>
   </FooterContainer>
 );
 

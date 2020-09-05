@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "../device";
 
-const PaddingWrapper = styled.div`
+const ContentWrapper = styled.div`
   @media ${device.mobileS} {
     padding: ${props => props.paddingTopBot || "15px"} 5%;
   }
@@ -19,4 +19,4 @@ const PaddingWrapper = styled.div`
   }
 `;
 
-export default PaddingWrapper
+export default ContentWrapper;

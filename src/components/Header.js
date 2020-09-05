@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import { device } from "../device";
-import PaddingWrapper from "./PaddingWrapper";
+import ContentWrapper from "./ContentWrapper";
 import AwfireLogoSrc from "../images/awfire_logo.png";
 import phoneIcon from "../images/phone_icon.png";
 import emailIcon from "../images/email_icon.png";
@@ -69,7 +69,7 @@ const Email = styled(ContactInfo)``;
 
 const Header = () => (
 	<HeaderContainer>
-		<PaddingWrapper paddingTopBot="10px">
+		<ContentWrapper paddingTopBot="10px">
 			<HeaderContent>
 				<Awfire>
 					<AwfireLogo src={AwfireLogoSrc}/>
@@ -88,7 +88,7 @@ const Header = () => (
 					</Email>
 				</ContactContainer>
 			</HeaderContent>
-		</PaddingWrapper>
+		</ContentWrapper>
 	</HeaderContainer>
 );
 

@@ -2,11 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../device";
 
-import PaddingWrapper from "../components/PaddingWrapper";
+import ContentWrapper from "../components/ContentWrapper";
 import showcaseBg from "../images/fire_sprinkler_bg.jpg";
 
 const LandingContainer = styled.div`
 	display: block;
+`;
+
+const StyledContentWrapper = styled(ContentWrapper)`
+	display: table;
+	height: inherit;
 `;
 
 const Showcase = styled.section`
@@ -17,7 +22,6 @@ const Showcase = styled.section`
 
 	@media ${device.mobileS} {
 		height: 400px;
-		padding-top: 150px;
 		h1 {
 			font-size: 25px;
 		}
@@ -25,7 +29,6 @@ const Showcase = styled.section`
 
 	@media ${device.mobileL} {
 		height: 450px;
-		padding-top: 150px;
 		h1 {
 			font-size: 30px;
 		}
@@ -33,7 +36,6 @@ const Showcase = styled.section`
 
 	@media ${device.tablet} {
 		height: 550px;
-		padding-top: 200px;
 		h1 {
 			font-size: 40px;
 		}
@@ -41,7 +43,6 @@ const Showcase = styled.section`
 
 	@media ${device.laptop} {
 		height: 700px;
-		padding-top: 250px;
 		h1 {
 			font-size: 50px;
 		}
@@ -49,7 +50,6 @@ const Showcase = styled.section`
 
 	@media ${device.desktop} {
 		height: 850px;
-		padding-top: 350px;
 		h1 {
 			font-size: 60px;
 		}
@@ -57,6 +57,8 @@ const Showcase = styled.section`
 `;
 
 const ShowcaseText = styled.h1`
+	display: table-cell;
+	vertical-align: middle;
 	font-size: 40px;
 	color: #fff;
 	text-shadow: 2.5px 2.5px 0 #ff6347;
@@ -65,11 +67,11 @@ const ShowcaseText = styled.h1`
 const Landing = () => (
 	<LandingContainer>
 		<Showcase>
-			<PaddingWrapper>
+			<StyledContentWrapper>
 				<ShowcaseText>
-					Design, Inspect, Test, Troubleshoot & Maintain:
+					Site currently under construction
 				</ShowcaseText>
-			</PaddingWrapper>
+			</StyledContentWrapper>
 		</Showcase>
 	</LandingContainer>
 );
