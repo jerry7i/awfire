@@ -4,7 +4,6 @@ import { device } from "../device";
 import showcaseBg from "../images/fire_sprinkler_bg.jpg";
 
 const LandingContainer = styled.div`
-	margin-bottom: 1000px;
 	display: block;
 `;
 
