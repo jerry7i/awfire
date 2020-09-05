@@ -10,7 +10,8 @@ const LandingContainer = styled.div`
 `;
 
 const ShowcaseContentWrapper = styled(ContentWrapper)`
-	display: table;
+	display: flex;
+	align-items: center;
 	height: inherit;
 `;
 
@@ -56,21 +57,27 @@ const Showcase = styled.section`
 	}
 `;
 
-const ShowcaseText = styled.h1`
-	display: table-cell;
-	vertical-align: middle;
+const ShowcaseBig = styled.h1`
+	flex: 1;
 	font-size: 40px;
 	color: #fff;
 	text-shadow: 2.5px 2.5px 0 #ff6347;
+`;
+
+// to be modified
+const ShowcaseSmall = styled.p`
+	flex: 1;
 `;
 
 const Landing = () => (
 	<LandingContainer>
 		<Showcase>
 			<ShowcaseContentWrapper>
-				<ShowcaseText>
-					Site currently under construction
-				</ShowcaseText>
+				<div>
+					<ShowcaseBig>
+						Site currently under construction
+					</ShowcaseBig>
+				</div>
 			</ShowcaseContentWrapper>
 		</Showcase>
 	</LandingContainer>
