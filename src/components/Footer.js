@@ -14,7 +14,8 @@ const FooterContainer = styled.div`
 const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
+  column-gap: 150px;
 `;
 
 const FooterText = styled.p`
@@ -23,13 +24,7 @@ const FooterText = styled.p`
 `;
 
 const Copyright = styled(FooterText)`
-  @media ${device.mobileS} {
-    margin-bottom: 20px;
-  }
-  
-  @media ${device.tablet} {
-    margin: 0px 100px 20px 0;
-  }
+  margin-bottom: 20px;
 `;
 
 const ContactInfo = styled(FooterText)``;
