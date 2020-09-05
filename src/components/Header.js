@@ -37,6 +37,7 @@ const AwfireLogo = styled.img`
 `;
 
 const HeaderTitle = styled.h1`
+	font-family: 'Montserrat', sans-serif;
 	display: inline-block;
 	color: #e55;
 `;
