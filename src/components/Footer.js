@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
   background-color: #222;
 `;
 
-const FooterContent = styled.div`
+const FooterContentWrapper = styled(ContentWrapper)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -50,27 +50,25 @@ const ContactIcon = styled.img`
 
 const Footer = () => (
   <FooterContainer>
-    <ContentWrapper paddingTopBot="20px">
-      <FooterContent>
-        <Copyright>
-          Copyrights &copy; {date.getFullYear()} All Rights Reserved by AWFire Protection
-        </Copyright>
-        <ContactInfo>
-          <FooterText>
-            <ContactIcon src={phoneIcon} />
-            416-893-6660
-          </FooterText>
-          <FooterText>
-            <ContactIcon src={emailIcon} />
-            info@AWFire.ca
-          </FooterText>
-          <FooterText>
-            <ContactIcon src={houseIcon} />
-            2 Goldbrook Crescent, Richmond Hill, ON L4S 1V4
-          </FooterText>
-        </ContactInfo>
-      </FooterContent>
-    </ContentWrapper>
+    <FooterContentWrapper paddingTopBot="20px">
+      <Copyright>
+        Copyright &copy; {date.getFullYear()} AWFire Protection. All Rights Reserved
+      </Copyright>
+      <ContactInfo>
+        <FooterText>
+          <ContactIcon src={phoneIcon} />
+          416-893-6660
+        </FooterText>
+        <FooterText>
+          <ContactIcon src={emailIcon} />
+          info@AWFire.ca
+        </FooterText>
+        <FooterText>
+          <ContactIcon src={houseIcon} />
+          2 Goldbrook Crescent, Richmond Hill, ON L4S 1V4
+        </FooterText>
+      </ContactInfo>
+    </FooterContentWrapper>
   </FooterContainer>
 );
 

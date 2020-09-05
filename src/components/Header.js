@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
 	background-color: #fff;
 `;
 
-const HeaderContent = styled.div`
+const HeaderContentWrapper = styled(ContentWrapper)`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-end;
@@ -69,26 +69,24 @@ const Email = styled(ContactInfo)``;
 
 const Header = () => (
 	<HeaderContainer>
-		<ContentWrapper paddingTopBot="10px">
-			<HeaderContent>
-				<Awfire>
-					<AwfireLogo src={AwfireLogoSrc}/>
-					<HeaderTitle>
-						AWFire Protection
-					</HeaderTitle>
-				</Awfire>	
-				<ContactContainer>
-					<Phone>
-						<PhoneIcon src={phoneIcon} />
-						416-893-6660
-					</Phone>
-					<Email>
-						<EmailIcon src={emailIcon}/> 
-						info@AWFire.ca
-					</Email>
-				</ContactContainer>
-			</HeaderContent>
-		</ContentWrapper>
+		<HeaderContentWrapper paddingTopBot="10px">
+			<Awfire>
+				<AwfireLogo src={AwfireLogoSrc}/>
+				<HeaderTitle>
+					AWFire Protection
+				</HeaderTitle>
+			</Awfire>	
+			<ContactContainer>
+				<Phone>
+					<PhoneIcon src={phoneIcon} />
+					416-893-6660
+				</Phone>
+				<Email>
+					<EmailIcon src={emailIcon}/> 
+					info@AWFire.ca
+				</Email>
+			</ContactContainer>
+		</HeaderContentWrapper>
 	</HeaderContainer>
 );
 

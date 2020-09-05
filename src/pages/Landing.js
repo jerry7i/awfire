@@ -9,7 +9,7 @@ const LandingContainer = styled.div`
 	display: block;
 `;
 
-const StyledContentWrapper = styled(ContentWrapper)`
+const ShowcaseContentWrapper = styled(ContentWrapper)`
 	display: table;
 	height: inherit;
 `;
@@ -67,11 +67,11 @@ const ShowcaseText = styled.h1`
 const Landing = () => (
 	<LandingContainer>
 		<Showcase>
-			<StyledContentWrapper>
+			<ShowcaseContentWrapper>
 				<ShowcaseText>
 					Site currently under construction
 				</ShowcaseText>
-			</StyledContentWrapper>
+			</ShowcaseContentWrapper>
 		</Showcase>
 	</LandingContainer>
 );
