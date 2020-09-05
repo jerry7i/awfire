@@ -21,6 +21,14 @@ const FooterContent = styled.div`
 const FooterText = styled.p`
   color: #aaa;
   display: block;
+
+  @media ${device.mobileS} {
+    font-size: 12.5px;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 15px;
+  }
 `;
 
 const Copyright = styled(FooterText)`
