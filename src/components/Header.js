@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-
+import { device } from "../device";
 import PaddingWrapper from "./PaddingWrapper";
 import AwfireLogoSrc from "../images/awfire_logo.png";
 import phoneIcon from "../images/phone_icon.png";
@@ -14,15 +14,26 @@ const HeaderContainer = styled.div`
 
 const HeaderContent = styled.div`
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-end;
+	column-gap: 150px;
+
+	@media ${device.mobileS} {
+		justify-content: center;
+	}
+
+	@media ${device.tablet} {
+		justify-content: space-between;	
+	}
+`;
+
+const Awfire = styled.div`
+	text-align: center;
 `;
 
 const AwfireLogo = styled.img`
 	width: 80px;
 	height: 80px;
-	padding: 0;
 `;
 
 const HeaderTitle = styled.h1`
@@ -31,10 +42,10 @@ const HeaderTitle = styled.h1`
 `;
 
 const ContactContainer = styled.div`
+	flex-basis: 300px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	width: 340px;
 `;
 
 const ContactIcon = styled.img`
@@ -51,7 +62,6 @@ const EmailIcon = styled(ContactIcon)``;
 const ContactInfo = styled.p`
 	color: #333;
 	display: inline-block;
-	margin: 0 auto;
 `;
 
 const Phone = styled(ContactInfo)``;
@@ -61,12 +71,12 @@ const Header = () => (
 	<HeaderContainer>
 		<PaddingWrapper paddingTopBot="10px">
 			<HeaderContent>
-				<div style={{textAlign: 'center'}}>
+				<Awfire>
 					<AwfireLogo src={AwfireLogoSrc}/>
 					<HeaderTitle>
 						AWFire Protection
 					</HeaderTitle>
-				</div>	
+				</Awfire>	
 				<ContactContainer>
 					<Phone>
 						<PhoneIcon src={phoneIcon} />
