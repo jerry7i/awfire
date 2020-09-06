@@ -34,6 +34,15 @@ const Awfire = styled.div`
 const AwfireLogo = styled.img`
 	width: 80px;
 	height: 80px;
+	margin: 0 auto;
+
+	@media ${device.mobileS} {
+		display: block;
+	}
+
+	@media ${device.tablet} {
+		display: inline-block;
+	}
 `;
 
 const HeaderTitle = styled.h1`
