@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { device } from "../device";
 import ContentWrapper from "./ContentWrapper";
 import AwfireLogoSrc from "../images/awfire_logo.png";
-import phoneIcon from "../images/phone_icon.png";
-import emailIcon from "../images/email_icon.png";
+import phoneIcon from "../images/telephone.svg";
+import emailIcon from "../images/envelope.svg";
 
 const HeaderContainer = styled.div`
 	z-index: 99;
@@ -50,9 +50,9 @@ const ContactContainer = styled.div`
 `;
 
 const ContactIcon = styled.img`
-	width: 25px;
-	height: 25px;
-	margin-right: 5px;
+	width: 22px;
+	height: 22px;
+	margin-right: 7px;
 	display: inline-block;
 	vertical-align: bottom;
 `;

@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { device } from "../device";
 
 import ContentWrapper from "./ContentWrapper";
-import phoneIcon from "../images/phone_icon.png";
-import emailIcon from "../images/email_icon.png";
-import houseIcon from "../images/house_icon.png";
+import phoneIcon from "../images/telephone-fill.svg";
+import emailIcon from "../images/envelope-fill.svg";
+import houseIcon from "../images/house-door-fill.svg";
 
 const FooterContainer = styled.div`
   background-color: #222;
@@ -21,6 +21,7 @@ const FooterContentWrapper = styled(ContentWrapper)`
 const FooterText = styled.p`
   color: #aaa;
   display: block;
+  margin-bottom: 6px;
 
   @media ${device.mobileS} {
     font-size: 12.5px;
@@ -38,9 +39,9 @@ const Copyright = styled(FooterText)`
 const date = new Date();
 
 const ContactIcon = styled.img`
-	width: 25px;
-	height: 25px;
-	margin-right: 5px;
+	width: 22px;
+	height: 22px;
+	margin-right: 7px;
 	display: inline-block;
   vertical-align: bottom;
   filter: invert(70%);
