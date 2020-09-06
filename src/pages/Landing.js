@@ -5,17 +5,18 @@ import { device } from "../device";
 import ContentWrapper from "../components/ContentWrapper";
 import showcaseBg from "../images/fire_sprinkler_bg.jpg";
 
-const LandingContainer = styled.div`
+const LandingContainer = styled.section`
 	display: block;
 `;
 
+// Showcase
 const ShowcaseContentWrapper = styled(ContentWrapper)`
 	display: flex;
 	align-items: center;
 	height: inherit;
 `;
 
-const Showcase = styled.section`
+const Showcase = styled.div`
 	background-image: url(${showcaseBg});
 	background-size: cover;
 	background-position: 40% 0;
@@ -57,7 +58,7 @@ const Showcase = styled.section`
 	}
 `;
 
-const ShowcaseBig = styled.h1`
+const ShowcaseBigText = styled.h1`
 	flex: 1;
 	font-size: 40px;
 	color: #fff;
@@ -65,8 +66,65 @@ const ShowcaseBig = styled.h1`
 `;
 
 // to be modified
-const ShowcaseSmall = styled.p`
+const ShowcaseSmallText = styled.p`
 	flex: 1;
+`;
+
+const ServicesContentWrapper = styled(ContentWrapper)`
+	text-align: center;
+	background-color: #f8f8f8;
+`;
+
+// Services
+const ServicesHeader = styled.h1`
+	display: inline-block;
+	padding: 0 20px;
+	font-size: 25px;
+	background-color: inherit;
+`;
+
+const ServicesHeaderLine = styled.div`
+	height: 20px;
+	border-bottom: solid 1px red;
+	margin-bottom: 60px;
+	background-color: inherit;
+`;
+
+const ServicesContainer = styled.div`
+	display: block;
+
+	@media ${device.tablet} {
+		padding-bottom: ${props => props.paddingBot || "0px"};
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		column-gap: 4%;
+	}	
+`;
+
+const ServiceCard = styled.div`
+	flex: 1;
+	padding: 20px 0;
+	text-align: center;
+	margin-bottom: 20px;
+	background-color: #fff;
+	box-shadow: 0px 1px 3px rgba(0,0,0,.30);
+	transition: transform 100ms, box-shadow 100ms;
+
+	&:hover {
+		transform: translate(0, -3px);
+		box-shadow: 0px 1px 4px rgba(0,0,0,.4);
+	}
+
+	@media ${device.tablet} {
+		margin-bottom: 0;
+	}
+`;
+
+const ServiceText = styled.p`
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: #f22;
 `;
 
 const Landing = () => (
@@ -74,12 +132,41 @@ const Landing = () => (
 		<Showcase>
 			<ShowcaseContentWrapper>
 				<div>
-					<ShowcaseBig>
+					<ShowcaseBigText>
 						Site currently under construction
-					</ShowcaseBig>
+					</ShowcaseBigText>
 				</div>
 			</ShowcaseContentWrapper>
 		</Showcase>
+		<ServicesContentWrapper paddingTopBot="50px">
+			<ServicesHeaderLine>
+				<ServicesHeader>
+					Our Services
+				</ServicesHeader>
+			</ServicesHeaderLine>
+			<ServicesContainer paddingBot="30px">
+				<ServiceCard>
+					<ServiceText>Fire Safety Plan</ServiceText>
+				</ServiceCard>
+				<ServiceCard>
+					<ServiceText>Fire Extinguisher</ServiceText>
+				</ServiceCard>
+				<ServiceCard>
+					<ServiceText>Kitchen Fire Suppresion</ServiceText>
+				</ServiceCard>
+			</ServicesContainer>
+			<ServicesContainer>
+				<ServiceCard>
+					<ServiceText>Fire Alarm System</ServiceText>
+				</ServiceCard>
+				<ServiceCard>
+					<ServiceText>Sprinkler System</ServiceText>
+				</ServiceCard>
+				<ServiceCard>
+					<ServiceText>Emergency Lighting System</ServiceText>
+				</ServiceCard>
+			</ServicesContainer>
+		</ServicesContentWrapper>
 	</LandingContainer>
 );
 
