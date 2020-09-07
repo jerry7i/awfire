@@ -37,16 +37,11 @@ const Awfire = styled.div`
 const AwfireLogo = styled.img`
 	width: 80px;
 	height: 80px;
-	margin: 0 auto;
-
-	@media ${device.mobileS} {
-		display: block;
-	}
-
-	@media ${device.tablet} {
-		display: inline-block;
-		vertical-align: -25px;
-		margin: 5px 15px 5px 0;
+	display: inline-block;
+	vertical-align: -25px;
+	
+	@media ${device.mobileL} {
+		margin: 5px 15px 10px 0;
 	}
 `;
 
