@@ -25,18 +25,6 @@ const ServicesHeaderLine = styled.div`
 	background-color: inherit;
 `;
 
-const ServicesContainer = styled.div`
-	display: block;
-
-	@media ${device.tablet} {
-		padding-bottom: ${props => props.paddingBot || "0px"};
-		display: flex;
-		justify-content: space-between;
-		align-items: stretch;
-		column-gap: 3%;
-	}	
-`;
-
 const ServiceCard = styled.div`
 	flex: 1;
 	padding: 20px 10px;
@@ -50,10 +38,22 @@ const ServiceCard = styled.div`
 		transform: translate(0, -3px);
 		box-shadow: 0px 1px 4px rgba(0,0,0,.4);
 	}
+`;
 
-	@media ${device.tablet} {
-		margin-bottom: 0;
-	}
+const ServicesContainer = styled.div`
+	display: block;
+
+	@media ${device.laptop} {
+		padding-bottom: ${props => props.paddingBot || "0px"};
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		column-gap: 2%;
+		
+		${ServiceCard} {
+			margin-bottom: 0;
+		}
+	}	
 `;
 
 const ServiceText = styled.p`
