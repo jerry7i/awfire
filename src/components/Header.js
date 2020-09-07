@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from "styled-components";
 import { device } from "../device";
 import ContentWrapper from "./ContentWrapper";
@@ -8,11 +8,12 @@ import emailIcon from "../images/envelope.svg";
 
 const HeaderContainer = styled.div`
 	position: fixed;
-	top: 0;
+	top: ${props => props.showHeader ? "0px" : "-200px"};
 	z-index: 99; 
 	width: 100%;
 	box-shadow: 0 1px 3px rgba(0,0,0,.2);
 	background-color: #fff;
+	transition: top 300ms;
 `;
 
 const HeaderContentWrapper = styled(ContentWrapper)`
@@ -39,7 +40,7 @@ const AwfireLogo = styled.img`
 	height: 80px;
 	display: inline-block;
 	vertical-align: -25px;
-	
+
 	@media ${device.mobileL} {
 		margin: 5px 15px 10px 0;
 	}
@@ -78,8 +79,25 @@ const ContactInfo = styled.p`
 const Phone = styled(ContactInfo)``;
 const Email = styled(ContactInfo)``;
 
-const Header = () => (
-	<HeaderContainer>
+
+const Header = () => {
+	const [showHeader, setShowHeader] = useState(true);
+
+	const handleScroll = (prevPos) => {
+		setShowHeader(window.scrollY < 200);
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+
+		return (() => {
+			window.removeEventListener("scroll", handleScroll);
+		});
+	}, [showHeader]);
+
+	
+	return (
+	<HeaderContainer showHeader={showHeader}>
 		<HeaderContentWrapper paddingTopBot="10px">
 			<Awfire>
 				<AwfireLogo src={AwfireLogoSrc}/>
@@ -99,7 +117,7 @@ const Header = () => (
 			</ContactContainer>
 		</HeaderContentWrapper>
 	</HeaderContainer>
-);
+)};
 
 
 export default Header;
