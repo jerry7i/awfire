@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { device } from "../../device";
 
 import ContentWrapper from "../../components/ContentWrapper";
-import showcaseBg from "../../images/fire_sprinkler_bg.jpg";
+import showcaseBg from "../../images/fire_system_inspection.jpg";
 
 const ShowcaseContentWrapper = styled(ContentWrapper)`
 	display: flex;
@@ -14,8 +14,8 @@ const ShowcaseContentWrapper = styled(ContentWrapper)`
 const ShowcaseContainer = styled.div`
 	background-image: url(${showcaseBg});
 	background-size: cover;
-	background-position: 40% 0;
-	width: 100%;
+	background-position: 30% 0;
+	background-repeat: no-repeat;
 
 	@media ${device.mobileS} {
 		height: 400px;
@@ -40,13 +40,15 @@ const ShowcaseContainer = styled.div`
 
 	@media ${device.laptop} {
 		height: 700px;
+		background-position: 0% -50px;
 		h1 {
 			font-size: 50px;
 		}
 	}
 
 	@media ${device.desktop} {
-		height: 850px;
+		height: 900px;
+		background-position: 0% -50px;
 		h1 {
 			font-size: 60px;
 		}
