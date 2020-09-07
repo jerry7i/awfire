@@ -6,6 +6,7 @@ import Services from "./Services";
 
 const LandingContainer = styled.section`
 	display: block;
+	margin-top: 100px;
 `;
 
 const Landing = () => (

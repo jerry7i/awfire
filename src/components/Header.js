@@ -7,8 +7,11 @@ import phoneIcon from "../images/telephone.svg";
 import emailIcon from "../images/envelope.svg";
 
 const HeaderContainer = styled.div`
-	z-index: 99;
-	border-bottom: solid 2px #aaa;
+	position: fixed;
+	top: 0;
+	z-index: 99; 
+	width: 100%;
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
 	background-color: #fff;
 `;
 
@@ -42,6 +45,8 @@ const AwfireLogo = styled.img`
 
 	@media ${device.tablet} {
 		display: inline-block;
+		vertical-align: -25px;
+		margin: 5px 15px 5px 0;
 	}
 `;
 
@@ -49,7 +54,7 @@ const HeaderTitle = styled.h1`
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	display: inline-block;
-	color: #e55;
+	color: #e22;
 `;
 
 const ContactContainer = styled.div`

@@ -71,24 +71,24 @@ const Services = () => (
     </ServicesHeaderLine>
     <ServicesContainer paddingBot="25px">
       <ServiceCard>
-        <ServiceText>Fire Safety Plan</ServiceText>
+        <ServiceText>Fire Alarm System</ServiceText>
       </ServiceCard>
       <ServiceCard>
         <ServiceText>Fire Extinguisher</ServiceText>
       </ServiceCard>
       <ServiceCard>
-        <ServiceText>Kitchen Fire Suppresion</ServiceText>
+        <ServiceText>Fire Sprinkler System</ServiceText>
       </ServiceCard>
     </ServicesContainer>
     <ServicesContainer>
       <ServiceCard>
-        <ServiceText>Fire Alarm System</ServiceText>
+        <ServiceText>Fire Safety Plan</ServiceText>
       </ServiceCard>
       <ServiceCard>
-        <ServiceText>Sprinkler System</ServiceText>
+        <ServiceText>Emergency Lighting</ServiceText>
       </ServiceCard>
       <ServiceCard>
-        <ServiceText>Emergency Lighting System</ServiceText>
+        <ServiceText>Kitchen Fire Suppression System</ServiceText>
       </ServiceCard>
     </ServicesContainer>
   </ServicesContentWrapper>
