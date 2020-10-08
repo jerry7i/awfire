@@ -1,6 +1,7 @@
 # AWFire Protection's web page
 
-awfire.ca is a web page that provides information on the contacts and services of AWFire Protection Inc.
+[awfire.ca](https://awfire.ca) is the company website of AWFire Protection Inc.\
+*Source code hosted with permission from the owner.
 
 ## :hammer: Built With
 - [create-react-app](https://github.com/facebook/create-react-app)
