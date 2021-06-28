@@ -64,7 +64,7 @@ const Footer = () => (
         </FooterText>
         <FooterText>
           <ContactIcon src={houseIcon} />
-          2 Goldbrook Crescent, Richmond Hill, ON L4S 1V4
+          66 Denne Blvd, Newmarket ON L3Y4H4, Canada
         </FooterText>
       </div>
     </FooterContentWrapper>
