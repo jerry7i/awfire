@@ -64,7 +64,7 @@ const Footer = () => (
         </FooterText>
         <FooterText>
           <ContactIcon src={houseIcon} />
-          66 Denne Blvd, Newmarket ON L3Y4H4, Canada
+          1172 David Drive, Unit#: M103, Newmarket, ON L3Y 8X4
         </FooterText>
       </div>
     </FooterContentWrapper>
