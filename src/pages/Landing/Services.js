@@ -76,14 +76,11 @@ const Services = () => (
       <ServiceCard>
         <ServiceText>Fire Extinguisher</ServiceText>
       </ServiceCard>
-      <ServiceCard>
-        <ServiceText>Fire Sprinkler System</ServiceText>
+	  <ServiceCard>
+        <ServiceText>Fire Safety Plan</ServiceText>
       </ServiceCard>
     </ServicesContainer>
     <ServicesContainer>
-      <ServiceCard>
-        <ServiceText>Fire Safety Plan</ServiceText>
-      </ServiceCard>
       <ServiceCard>
         <ServiceText>Emergency Lighting</ServiceText>
       </ServiceCard>
